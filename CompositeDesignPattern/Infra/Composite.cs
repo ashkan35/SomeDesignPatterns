@@ -9,6 +9,7 @@ public class Composite:ICustomComponent
     public Composite(string name)
     {
         Name = name;
+        Components = new List<ICustomComponent>();
     }
 
     public void AddComponent(ICustomComponent component)
