@@ -15,6 +15,10 @@ public class DataReceiver
         Console.WriteLine($"Upserted:{key}-{value}");
     }
 
+    public Dictionary<string, string> GetData()
+    {
+        return _data;
+    }
     public void Delete(string key)
     {
         if (_data.ContainsKey(key))

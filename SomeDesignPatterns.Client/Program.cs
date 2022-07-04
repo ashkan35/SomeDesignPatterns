@@ -1,5 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+using CommandDesignPattern.Data;
+using CommandDesignPattern.Infra.Commands;
+using CommandDesignPattern.Infra.Invoker;
 using CompositeDesignPattern.Infra;
 using CompositeDesignPattern.Interface;
 
@@ -50,7 +53,13 @@ Console.WriteLine("****** Asset Price *******");
 
 #region CommandDesignPattern
 
-
+var dataReceiver = new DataReceiver();
+var invoker = new DataCommandInvoker();
+invoker.SetCommand(new UpsertCommand("Name","Ashkan",dataReceiver));
+invoker.ExecuteCommand();
+invoker.SetCommand(new DeleteCommand("Name",dataReceiver));
+invoker.ExecuteCommand();
+Console.ReadKey();
  
 
 #endregion
