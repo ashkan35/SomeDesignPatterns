@@ -10,6 +10,7 @@
   <ItemGroup>
     <ProjectReference Include="..\CommandDesignPattern\CommandDesignPattern.csproj" />
     <ProjectReference Include="..\CompositeDesignPattern\CompositeDesignPattern.csproj" />
+    <ProjectReference Include="..\Eshop.DataAccess\Eshop_DataAccess.csproj" />
   </ItemGroup>
 
 </Project>
